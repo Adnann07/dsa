@@ -68,6 +68,41 @@ void printLast()
     cout<<curr_node->data<<endl;
 }
 
+void print2ndLast()
+{
+    node *curr_node=root;
+    node *prev_node=NULL;
+    while(curr_node->next!=NULL)
+    {
+        prev_node=curr_node;
+        curr_node=curr_node->next;
+    }
+    cout<<prev_node->data<<endl;
+}
+
+void reversePrint(node *curr_node)
+{
+    if(curr_node!=NULL)
+    {
+        reversePrint(curr_node->next);
+        cout<<curr_node->data<<endl;
+    }
+}
+
+
+void delLast()
+{
+    node *curr_node=root;
+    node *prev_node=NULL;
+
+    while(curr_node->next!=NULL)
+    {
+        prev_node=curr_node;
+        curr_node=curr_node->next;
+    }
+    prev_node->next=NULL;
+}
+
 int main()
 {
     InsertFirst(30);
