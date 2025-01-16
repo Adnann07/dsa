@@ -12,7 +12,7 @@ int partion(vector<int>& v,int start,int end)
         if(v[j]<pivot)
         {
             i++;
-            swap(abs(v[i]),abs(v[j]));
+            swap(v[i],v[j]);
         }
     }
     swap(v[i+1],v[end]);
