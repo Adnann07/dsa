@@ -6,20 +6,18 @@ int data;
 node *next;
 };
 node *root;
-
 void deleteMiddle()
 {
-   node *slow=NULL;
-   node *fast=NULL;
-   node *prev=NULL;
-   while(fast!=NULL && fast->next!=NULL)
-   {
-       prev=slow;
-       slow->next;
-       fast->next->next;
-   }
+    node *slow=NULL;
+    node *fast=NULL;
+    node *prev=NULL;
+    while(fast!=NULL && fast->next!=NULL)
+    {
+        prev=slow;
+        slow=slow->next;
+        fast=fast->next->next;
+    }
 }
-
 void printing()
 {
     node *curr_node=root;
